@@ -13,7 +13,7 @@ are returned with a 503 status code.
 $app = new Silex\Application();
 
 $app->get('/', function () {
-    return 'some my app is working';
+    return 'my app is working';
 });
 
 $stack = (new Stack\Builder())
