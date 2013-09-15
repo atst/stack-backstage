@@ -20,7 +20,7 @@ class StackBackstage implements HttpKernelInterface
     {
         $path = realpath($this->path);
 
-        if (false !== $path) {
+        if (false !== $path  && is_readable($path)) {
             return new Response(file_get_contents($path), 503);
         }
 
